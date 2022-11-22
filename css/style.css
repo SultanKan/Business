@@ -1,0 +1,62 @@
+@import "nullstyle.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.pts {
+  font-family: "PT Serif";
+}
+
+.header__body {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  display: inline-block;
+  width: 172px;
+}
+.header__logo img {
+  max-width: 100%;
+}
+
+.menu-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu-header__list li {
+  margin: 0px 0px 0px 35px;
+}
+.menu-header__link {
+  color: #646667;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+.menu-header__link--circle {
+  display: block;
+  padding: 0px 42px 0px 0px;
+  background: url("../img/icons/header-circle.svg") right no-repeat;
+}
+.menu-header__link:hover {
+  color: #007397;
+}
