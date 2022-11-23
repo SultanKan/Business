@@ -17,6 +17,73 @@
    font-family: "PT Serif";
 }
 
+.ibg {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.ibg img {
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.bluebg {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: "";
+      rotate: 18deg;
+      position: absolute;
+      width: 35%;
+      height: 130%;
+      left: -50px;
+      top: -95px;
+      background-image: linear-gradient(198deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+   }
+}
+
+.btn {
+   display: inline-block;
+   padding: 0px 0px;
+   line-height: 56px;
+   overflow: hidden;
+   height: 56px;
+   background-color: #007397;
+   padding: 0 30px;
+   color: #ffffff;
+   font-size: 16px;
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   position: relative;
+   &::after {
+      content: "";
+      position: absolute;
+      width:0 ;
+      height: 100%;
+      left: 50%;
+      top:0;
+      background-color: #00526b;
+   }
+   span {
+      position: relative;
+      z-index: 2;
+   }
+   &:hover {
+      &::after {
+         left: 0;
+         width: 100%;
+      }
+   }
+}
+
 $minwidth: 320px;
 $mw: 1170px;
 $md1: $mw + 12px;
@@ -129,5 +196,71 @@ $md4: 474.98;
 //       }
 //    }
 // }
+
+// =====================================================
+
+// ========mainblock====================================
+
+.mainblock {
+   &__imageblock {
+      margin: 0px 0px 40px 0px;
+   }
+   &__bottomblock {
+   }
+}
+.imageblock {
+   position: relative;
+   height: 411px;
+
+   &__title {
+      position: absolute;
+      z-index: 5;
+      bottom: 80px;
+      right: 0;
+      text-shadow: 0 3px 1px rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-family: "PT Serif";
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 48px;
+      text-transform: uppercase;
+      max-width: 770px;
+   }
+   &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      &::after {
+         content: "";
+         rotate: 18deg;
+         position: absolute;
+         width: 35%;
+         height: 130%;
+         left: -50px;
+         top: -95px;
+         background-image: linear-gradient(198deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+      }
+   }
+}
+
+.bottomblock {
+   text-align: center;
+   &__text {
+      color: #646667;
+      font-size: 20px;
+      font-weight: 300;
+      max-width: 970px;
+      line-height: 36px;
+      margin: 0 auto;
+   }
+
+   &__btn {
+      margin:40px 0px 0px 0px;
+   }
+}
 
 // =====================================================

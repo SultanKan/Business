@@ -16,6 +16,71 @@
   font-family: "PT Serif";
 }
 
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bluebg {
+  position: relative;
+  overflow: hidden;
+}
+.bluebg::after {
+  content: "";
+  rotate: 18deg;
+  position: absolute;
+  width: 35%;
+  height: 130%;
+  left: -50px;
+  top: -95px;
+  background-image: linear-gradient(198deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0px 0px;
+  line-height: 56px;
+  overflow: hidden;
+  height: 56px;
+  background-color: #007397;
+  padding: 0 30px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  background-color: #00526b;
+}
+.btn span {
+  position: relative;
+  z-index: 2;
+}
+.btn:hover::after {
+  left: 0;
+  width: 100%;
+}
+
 .header__body {
   height: 100px;
   display: -webkit-box;
@@ -59,4 +124,60 @@
 }
 .menu-header__link:hover {
   color: #007397;
+}
+
+.mainblock__imageblock {
+  margin: 0px 0px 40px 0px;
+}
+.imageblock {
+  position: relative;
+  height: 411px;
+}
+.imageblock__title {
+  position: absolute;
+  z-index: 5;
+  bottom: 80px;
+  right: 0;
+  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: "PT Serif";
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 48px;
+  text-transform: uppercase;
+  max-width: 770px;
+}
+.imageblock__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.imageblock__bg::after {
+  content: "";
+  rotate: 18deg;
+  position: absolute;
+  width: 35%;
+  height: 130%;
+  left: -50px;
+  top: -95px;
+  background-image: linear-gradient(198deg, #007397 0%, rgba(0, 115, 151, 0) 100%);
+}
+
+.bottomblock {
+  text-align: center;
+}
+.bottomblock__text {
+  color: #646667;
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 970px;
+  line-height: 36px;
+  margin: 0 auto;
+}
+.bottomblock__btn {
+  margin: 40px 0px 0px 0px;
 }
